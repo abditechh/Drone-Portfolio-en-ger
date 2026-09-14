@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="de-CH">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Drohnen-Bewerbungsportfolio und Lebenslauf von Abdi Abdirashid."
+    />
+    <title>Abdi Abdirashid | Drone Career Portfolio</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --background: #06131d;
+        --panel: #0d2230;
+        --line: #274150;
+        --text: #f7fbfd;
+        --muted: #b9cbd5;
+        --accent: #94e6ff;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        min-height: 100vh;
+        margin: 0;
+        display: grid;
+        place-items: center;
+        padding: 28px;
+        background: radial-gradient(circle at 85% 15%, #153b50 0, transparent 34%), var(--background);
+        color: var(--text);
+        font-family: Inter, Arial, sans-serif;
+      }
+
+      main { width: min(900px, 100%); }
+      .language-row { display: flex; justify-content: flex-end; margin-bottom: 20px; }
+
+      button {
+        padding: 10px 14px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: transparent;
+        color: var(--accent);
+        font: inherit;
+        font-weight: 700;
+        cursor: pointer;
+      }
+
+      .eyebrow {
+        color: var(--accent);
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        max-width: 760px;
+        margin: 18px 0;
+        font-size: clamp(42px, 8vw, 82px);
+        line-height: 0.98;
+        letter-spacing: -0.05em;
+      }
+
+      .intro {
+        max-width: 660px;
+        margin-bottom: 34px;
+        color: var(--muted);
+        font-size: 18px;
+        line-height: 1.65;
+      }
+
+      .choices {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .card {
+        min-height: 210px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 26px;
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        background: var(--panel);
+        color: var(--text);
+        text-decoration: none;
+        transition: transform 160ms ease, border-color 160ms ease;
+      }
+
+      .card:hover, .card:focus-visible { border-color: var(--accent); transform: translateY(-3px); }
+      .number { color: var(--accent); font-size: 13px; font-weight: 800; }
+      h2 { margin: 42px 0 10px; font-size: 25px; }
+      .card p { margin: 0; color: var(--muted); line-height: 1.55; }
+      .arrow { margin-top: 24px; color: var(--accent); font-weight: 800; }
+
+      @media (max-width: 680px) {
+        .choices { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="language-row">
+        <button id="language-toggle" type="button">View in English</button>
+      </div>
+
+      <p class="eyebrow" data-de="Drohnenpilot · Schweiz" data-en="Drone pilot · Switzerland"></p>
+      <h1 data-de="Technik trifft Flugpraxis." data-en="Technical skills meet flight practice."></h1>
+      <p
+        class="intro"
+        data-de="Wählen Sie das Bewerbungsportfolio für einen Überblick über Qualifikationen und Flugpraxis oder öffnen Sie direkt den zweisprachigen Lebenslauf."
+        data-en="Choose the career portfolio for an overview of qualifications and flight practice, or open the bilingual CV directly."
+      ></p>
+
+      <div class="choices">
+        <a class="card" href="portfolio/">
+          <span class="number">01</span>
+          <div>
+            <h2 data-de="Bewerbungsportfolio" data-en="Career portfolio"></h2>
+            <p
+              data-de="Drohnenqualifikationen, private Flugpraxis, technischer Hintergrund und Berufsziel."
+              data-en="Drone qualifications, private flight practice, technical background and career objective."
+            ></p>
+            <div class="arrow" data-de="Portfolio öffnen →" data-en="Open portfolio →"></div>
+          </div>
+        </a>
+
+        <a class="card" href="cv/">
+          <span class="number">02</span>
+          <div>
+            <h2 data-de="Lebenslauf" data-en="Curriculum vitae"></h2>
+            <p
+              data-de="Lebenslauf auf Deutsch und Englisch mit PDF-Downloads und direkten Kontaktangaben."
+              data-en="German and English CV with PDF downloads and direct contact details."
+            ></p>
+            <div class="arrow" data-de="Lebenslauf öffnen →" data-en="Open CV →"></div>
+          </div>
+        </a>
+      </div>
+    </main>
+
+    <script>
+      const button = document.querySelector("#language-toggle");
+      let language = "de";
+
+      function applyLanguage(nextLanguage) {
+        language = nextLanguage;
+        document.documentElement.lang = language === "de" ? "de-CH" : "en";
+        document.querySelectorAll("[data-de]").forEach((element) => {
+          element.textContent = element.dataset[language];
+        });
+        button.textContent = language === "de" ? "View in English" : "Auf Deutsch anzeigen";
+      }
+
+      button.addEventListener("click", () => applyLanguage(language === "de" ? "en" : "de"));
+      applyLanguage("de");
+    </script>
+  </body>
+</html>
