@@ -1,0 +1,1625 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Abdi Abdirashid | Drohnenpilot & UAV-Bewerbungsportfolio</title>
+
+    <meta
+      name="description"
+      content="Bewerbungsportfolio von Abdi Abdirashid aus Bonstetten bei Zürich. EASA A1/A3 + A2, praktische Erfahrung in Unterhalt und Metallproduktion sowie Interesse an UAV-Einsätzen, Inspektionsunterstützung und technischer Mitarbeit."
+    >
+    <meta name="theme-color" content="#08131e">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    >
+
+    <style>
+      /* 01. Farben und Grundlagen */
+
+      :root {
+        --ink: #08131e;
+        --ink-soft: #0e2234;
+        --paper: #f5f7f8;
+        --white: #ffffff;
+        --muted: #596b79;
+        --line: #dfe6ea;
+        --accent: #66d0ff;
+        --accent-light: #9ce8ff;
+        --success: #3ad29f;
+        --radius: 24px;
+        --shadow: 0 24px 70px rgba(7, 24, 37, .12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 110px;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Inter, system-ui, sans-serif;
+        line-height: 1.7;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: Manrope, sans-serif;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      img,
+      video {
+        display: block;
+        width: 100%;
+      }
+
+      button {
+        font: inherit;
+      }
+
+      a:focus-visible,
+      button:focus-visible,
+      video:focus-visible {
+        outline: 3px solid #147aa6;
+        outline-offset: 5px;
+      }
+
+      .container {
+        width: min(1180px, calc(100% - 40px));
+        margin-inline: auto;
+      }
+
+      .section {
+        padding: 92px 0;
+      }
+
+      .section-white {
+        background: var(--white);
+      }
+
+      .eyebrow {
+        margin-bottom: 12px;
+        color: #12678d;
+        font-size: .76rem;
+        font-weight: 800;
+        letter-spacing: .14em;
+        text-transform: uppercase;
+      }
+
+      .section-head {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: end;
+        margin-bottom: 36px;
+      }
+
+      .section-head h2 {
+        margin-bottom: 0;
+        font-size: clamp(2rem, 4vw, 3.4rem);
+        line-height: 1.12;
+        letter-spacing: -.045em;
+        overflow-wrap: anywhere;
+      }
+
+      .section-head > p {
+        margin-bottom: 0;
+        color: var(--muted);
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 14px 21px;
+        border: 1px solid transparent;
+        border-radius: 999px;
+        font-weight: 800;
+        font-size: .9rem;
+        text-align: center;
+        transition: transform .2s, background .2s;
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+      }
+
+      .btn-white {
+        background: var(--white);
+        color: var(--ink);
+      }
+
+      .btn-outline {
+        background: rgba(255, 255, 255, .07);
+        border-color: rgba(255, 255, 255, .3);
+        color: var(--white);
+      }
+
+      .btn-dark {
+        background: var(--ink);
+        color: var(--white);
+      }
+
+      .btn-light {
+        background: #eaf3f7;
+        color: var(--ink);
+      }
+
+      .skip-link {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        z-index: 100;
+        padding: 12px 18px;
+        background: white;
+        transform: translateY(-160%);
+      }
+
+      .skip-link:focus {
+        transform: translateY(0);
+      }
+
+      /* 02. Navigation */
+
+      .site-header {
+        position: fixed;
+        inset: 0 0 auto;
+        z-index: 30;
+        background: rgba(5, 15, 23, .94);
+        backdrop-filter: blur(16px);
+        border-bottom: 1px solid rgba(255, 255, 255, .1);
+      }
+
+      .nav {
+        min-height: 76px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        padding-block: 12px;
+        color: white;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        font-weight: 800;
+        line-height: 1.3;
+      }
+
+      .mark {
+        display: grid;
+        place-items: center;
+        flex: 0 0 38px;
+        height: 38px;
+        border-radius: 12px;
+        background: linear-gradient(135deg, var(--accent), white);
+        color: var(--ink);
+        font-family: Manrope, sans-serif;
+      }
+
+      .brand small {
+        display: block;
+        margin-top: 4px;
+        color: #bfd2dd;
+        font-size: .68rem;
+        font-weight: 500;
+      }
+
+      .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 22px;
+        font-size: .85rem;
+      }
+
+      .nav-links a:hover {
+        color: var(--accent-light);
+      }
+
+      .nav-links .nav-cta {
+        padding: 9px 15px;
+        border-radius: 999px;
+        background: white;
+        color: var(--ink);
+        font-weight: 800;
+      }
+
+      /* 03. Persönlicher Einstieg */
+
+      .hero {
+        position: relative;
+        isolation: isolate;
+        overflow: hidden;
+        min-height: 92svh;
+        display: flex;
+        align-items: center;
+        background: var(--ink);
+        color: white;
+      }
+
+      .hero-video {
+        position: absolute;
+        inset: 0;
+        z-index: -2;
+        height: 100%;
+        object-fit: cover;
+        opacity: .42;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background:
+          linear-gradient(
+            90deg,
+            rgba(4, 13, 21, .96),
+            rgba(4, 13, 21, .66)
+          ),
+          linear-gradient(
+            0deg,
+            var(--ink),
+            transparent 65%
+          );
+      }
+
+      .hero-content {
+        padding-top: 160px;
+        padding-bottom: 76px;
+      }
+
+      .hero .eyebrow {
+        color: var(--accent-light);
+      }
+
+      .hero h1 {
+        max-width: 1000px;
+        margin-bottom: 25px;
+        font-size: clamp(3rem, 7.8vw, 6.8rem);
+        line-height: 1.02;
+        letter-spacing: -.055em;
+      }
+
+      .hero h1 span {
+        color: var(--accent-light);
+      }
+
+      .hero-role {
+        margin-bottom: 18px;
+        color: white;
+        font-weight: 700;
+        font-size: clamp(1.05rem, 2.5vw, 1.35rem);
+      }
+
+      .hero-lead {
+        max-width: 750px;
+        margin-bottom: 28px;
+        color: #d0e0e9;
+        font-size: 1.05rem;
+      }
+
+      .trustbar {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 12px;
+        margin-top: 42px;
+      }
+
+      .trust {
+        padding: 17px;
+        border: 1px solid rgba(255, 255, 255, .14);
+        border-radius: 17px;
+        background: rgba(255, 255, 255, .07);
+      }
+
+      .trust strong {
+        display: block;
+        margin-bottom: 5px;
+        font-size: .94rem;
+      }
+
+      .trust span {
+        display: block;
+        color: #bfd2dd;
+        font-size: .8rem;
+      }
+
+      .motion-button {
+        margin-top: 22px;
+        padding: 7px 0;
+        border: 0;
+        background: transparent;
+        color: #d0e0e9;
+        cursor: pointer;
+        font-size: .78rem;
+        text-decoration: underline;
+        text-underline-offset: 4px;
+      }
+
+      /* 04. Profil und Berufserfahrung */
+
+      .profile-grid {
+        display: grid;
+        grid-template-columns: 1.1fr .9fr;
+        gap: 24px;
+      }
+
+      .card {
+        min-width: 0;
+        padding: 30px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: white;
+      }
+
+      .card h3 {
+        margin-bottom: 14px;
+        font-size: 1.4rem;
+        line-height: 1.25;
+      }
+
+      .card p {
+        color: var(--muted);
+      }
+
+      .card p:last-child {
+        margin-bottom: 0;
+      }
+
+      .dark-card {
+        background: var(--ink);
+        color: white;
+        border-color: var(--ink);
+      }
+
+      .dark-card p {
+        color: #bfd2dd;
+      }
+
+      .dark-card .eyebrow {
+        color: var(--accent-light);
+      }
+
+      .timeline {
+        display: grid;
+        gap: 24px;
+      }
+
+      .timeline-item {
+        padding-left: 18px;
+        border-left: 2px solid var(--accent);
+      }
+
+      .timeline-item small {
+        display: block;
+        margin-bottom: 5px;
+        color: #12678d;
+        font-weight: 800;
+      }
+
+      .timeline-item h3 {
+        margin-bottom: 7px;
+        font-size: 1.05rem;
+      }
+
+      .timeline-item p {
+        margin: 0;
+        font-size: .93rem;
+      }
+
+      /* 05. Kompetenzen */
+
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .skill-number {
+        display: grid;
+        place-items: center;
+        width: 42px;
+        height: 42px;
+        margin-bottom: 22px;
+        border-radius: 13px;
+        background: #eaf8ff;
+        color: #12678d;
+        font-weight: 800;
+        font-size: .82rem;
+      }
+
+      .skills-grid .card {
+        padding: 25px;
+      }
+
+      .skills-grid h3 {
+        font-size: 1.12rem;
+        overflow-wrap: anywhere;
+      }
+
+      .skills-grid p {
+        font-size: .92rem;
+      }
+
+      /* 06. Flugpraxis */
+
+      .work-grid {
+        display: grid;
+        grid-template-columns: 1.3fr .7fr;
+        gap: 24px;
+        align-items: start;
+      }
+
+      .video-card {
+        min-width: 0;
+        margin: 0;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: white;
+        box-shadow: var(--shadow);
+      }
+
+      .video-card video {
+        aspect-ratio: 16 / 10;
+        object-fit: contain;
+        background: #050d14;
+      }
+
+      .video-card figcaption {
+        padding: 22px 25px;
+      }
+
+      .video-card figcaption strong {
+        display: block;
+        margin-bottom: 7px;
+      }
+
+      .video-card figcaption p {
+        margin: 0;
+        color: var(--muted);
+        font-size: .9rem;
+      }
+
+      .tag {
+        display: inline-block;
+        margin-bottom: 14px;
+        padding: 5px 10px;
+        border-radius: 999px;
+        background: #eaf8ff;
+        color: #12678d;
+        font-size: .72rem;
+        font-weight: 800;
+      }
+
+      .detail-list {
+        margin: 0;
+      }
+
+      .detail-list dt {
+        margin-top: 18px;
+        font-weight: 800;
+        font-size: .88rem;
+      }
+
+      .detail-list dd {
+        margin: 4px 0 0;
+        color: var(--muted);
+        font-size: .9rem;
+      }
+
+      .detail-list dt:first-child {
+        margin-top: 0;
+      }
+
+      .learning-note {
+        margin-top: 24px;
+        padding: 22px 25px;
+        border-left: 3px solid var(--accent);
+        border-radius: 0 16px 16px 0;
+        background: #eaf3f7;
+        color: #344f60;
+        font-size: .93rem;
+      }
+
+      /* 07. Berufliche Richtung */
+
+      .direction {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: center;
+        padding: 42px;
+        border-radius: 30px;
+        background: linear-gradient(135deg, #08131e, #0d2a3e);
+        color: white;
+      }
+
+      .direction .eyebrow {
+        color: var(--accent-light);
+      }
+
+      .direction h2 {
+        margin-bottom: 20px;
+        font-size: clamp(2rem, 4vw, 3.3rem);
+        line-height: 1.12;
+        letter-spacing: -.04em;
+      }
+
+      .direction p {
+        color: #bfd2dd;
+      }
+
+      .role-list {
+        display: grid;
+        gap: 12px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .role-list li {
+        padding: 18px;
+        border: 1px solid rgba(255, 255, 255, .14);
+        border-radius: 16px;
+        background: rgba(255, 255, 255, .05);
+      }
+
+      .role-list strong {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      .role-list span {
+        display: block;
+        color: #bfd2dd;
+        font-size: .87rem;
+      }
+
+      /* 08. Weitere Fähigkeiten und Interessen */
+
+      .extra-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .text-link {
+        display: inline-block;
+        margin-top: 6px;
+        color: #12678d;
+        font-weight: 800;
+        text-decoration: underline;
+        text-underline-offset: 4px;
+      }
+
+      /* 09. Kontakt */
+
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1.1fr .9fr;
+        gap: 24px;
+      }
+
+      .contact-main {
+        padding: 36px;
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        background: white;
+      }
+
+      .contact-main h2 {
+        margin-bottom: 20px;
+        font-size: clamp(2rem, 4vw, 3.3rem);
+        line-height: 1.12;
+        letter-spacing: -.04em;
+      }
+
+      .contact-main p {
+        color: var(--muted);
+      }
+
+      .contact-main .actions {
+        margin-top: 25px;
+      }
+
+      .contact-details {
+        padding: 32px;
+        border-radius: 28px;
+        background: var(--ink);
+        color: white;
+      }
+
+      .contact-details h3 {
+        font-size: 1.45rem;
+      }
+
+      .contact-details dl {
+        margin: 0;
+      }
+
+      .contact-details dt {
+        margin-top: 22px;
+        color: #a9c3d1;
+        font-size: .75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: .06em;
+      }
+
+      .contact-details dd {
+        margin: 5px 0 0;
+        overflow-wrap: anywhere;
+      }
+
+      .contact-details a:hover {
+        color: var(--accent-light);
+      }
+
+      .documents-note {
+        margin-top: 26px;
+        margin-bottom: 0;
+        font-size: .86rem;
+      }
+
+      footer {
+        padding: 28px 0;
+        color: var(--muted);
+        font-size: .8rem;
+      }
+
+      .footer-row {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      /* 10. Tablet und Smartphone */
+
+      @media (max-width: 1000px) {
+        .skills-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .nav-links {
+          gap: 14px;
+        }
+      }
+
+      @media (max-width: 800px) {
+        html {
+          scroll-padding-top: 140px;
+        }
+
+        .nav {
+          flex-wrap: wrap;
+          gap: 12px;
+        }
+
+        .nav-links {
+          width: 100%;
+          justify-content: space-between;
+          gap: 10px;
+          font-size: .78rem;
+        }
+
+        .hero-content {
+          padding-top: 180px;
+        }
+
+        .section-head,
+        .profile-grid,
+        .work-grid,
+        .direction,
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .section-head {
+          gap: 20px;
+        }
+
+        .trustbar,
+        .extra-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .extra-grid .card:last-child {
+          grid-column: 1 / -1;
+        }
+      }
+
+      @media (max-width: 520px) {
+        .container {
+          width: calc(100% - 28px);
+        }
+
+        .section {
+          padding: 62px 0;
+        }
+
+        .hero-content {
+          padding-bottom: 50px;
+        }
+
+        .hero h1 {
+          font-size: clamp(2.8rem, 12vw, 4rem);
+        }
+
+        .hero-lead {
+          font-size: .96rem;
+        }
+
+        .trustbar {
+          gap: 9px;
+        }
+
+        .trust {
+          padding: 13px;
+        }
+
+        .trust strong {
+          font-size: .8rem;
+        }
+
+        .trust span {
+          font-size: .73rem;
+        }
+
+        .skills-grid,
+        .extra-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .card,
+        .direction,
+        .contact-main,
+        .contact-details {
+          padding: 24px;
+        }
+
+        .actions .btn {
+          width: 100%;
+        }
+
+        .nav-links .nav-cta {
+          padding: 7px 10px;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+        .btn {
+          transition: none;
+        }
+
+        .btn:hover {
+          transform: none;
+        }
+      }
+          /* Bilingual navigation and employer-focused presentation */
+      .language-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 38px;
+        border-bottom: 1px solid rgba(255,255,255,.1);
+      }
+      #language-toggle {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        border: 0;
+        padding: 8px 0;
+        background: transparent;
+        color: var(--accent-light);
+        font-size: .76rem;
+        font-weight: 700;
+        cursor: pointer;
+      }
+      #language-toggle:hover { color: white; }
+      .language-context { color: #a9bdc9; font-size: .68rem; }
+      .nav { min-height: 68px; }
+      html { scroll-padding-top: 140px; }
+      .hero { min-height: 88svh; }
+      .hero-content {
+        display: grid;
+        grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr);
+        gap: 34px 44px;
+        align-items: center;
+        padding-top: 162px;
+        padding-bottom: 48px;
+      }
+      .hero-copy { min-width: 0; }
+      .hero h1 {
+        font-size: clamp(2.1rem, 3.4vw, 3.4rem);
+        line-height: 1.09;
+        letter-spacing: -.045em;
+        margin-bottom: 24px;
+      }
+      .hero h1 span {
+        display: inline-block;
+        margin-top: 12px;
+        font-size: .91em;
+        line-height: 1.13;
+      }
+      .hero-role { font-size: 1rem; max-width: 590px; }
+      .hero-lead { font-size: .97rem; max-width: 620px; }
+      .hero-photo {
+        position: relative;
+        margin: 0;
+        border: 1px solid rgba(255,255,255,.24);
+        border-radius: 28px;
+        overflow: hidden;
+        background: var(--ink-soft);
+        box-shadow: 0 30px 80px rgba(0,0,0,.25);
+      }
+      .hero-photo img {
+        height: 380px;
+        object-fit: cover;
+        object-position: 56% 42%;
+      }
+      .hero-photo figcaption {
+        display: flex;
+        gap: 9px;
+        align-items: center;
+        padding: 16px;
+        color: #d8e8f0;
+        font-size: .75rem;
+      }
+      .photo-dot {
+        width: 6px;
+        height: 6px;
+        flex: 0 0 6px;
+        border-radius: 50%;
+        background: var(--success);
+      }
+      .trustbar { grid-column: 1 / -1; margin-top: 0; }
+      .motion-button { justify-self: start; margin-top: -16px; }
+      .section { padding: 76px 0; }
+      .section-head h2 { font-size: clamp(1.9rem, 3.4vw, 2.85rem); }
+      .direction h2, .contact-main h2 { font-size: clamp(1.9rem, 3.4vw, 2.85rem); }
+      .card { box-shadow: 0 8px 28px rgba(7,24,37,.025); }
+      .site-header :focus-visible, .hero :focus-visible { outline-color: var(--accent-light); }
+      @media (max-width: 800px) {
+        html { scroll-padding-top: 175px; }
+        .hero-content { grid-template-columns: 1fr; padding-top: 200px; }
+        .hero h1 { font-size: clamp(2.15rem, 6vw, 3.6rem); }
+        .hero-photo img { height: 340px; }
+        .hero-photo { max-width: 620px; width: 100%; }
+        .hero-role, .hero-lead { max-width: none; }
+      }
+      @media (max-width: 520px) {
+        .language-context { display: none; }
+        .hero-content { padding-top: 192px; gap: 26px; }
+        .hero h1 { font-size: clamp(2rem, 8vw, 2.7rem); }
+        .hero-photo img { height: 255px; }
+        .section { padding: 56px 0; }
+        .nav-links { font-size: .75rem; }
+        .hero .eyebrow { font-size: .68rem; letter-spacing: .1em; }
+        .hero .btn { font-size: .85rem; }
+        .motion-button { margin-top: 0; }
+      }
+      @media print {
+        .site-header, .hero-video, .motion-button, .language-row, .skip-link { display: none !important; }
+        .hero, .dark-card, .direction, .contact-details { background: white; color: #08131e; }
+        .hero::before { display: none; }
+        .hero-content { padding-top: 20px; }
+        .section { padding: 24px 0; }
+        .hero p, .hero h1 span, .trust span, .dark-card p, .direction p, .role-list span { color: #344f60; }
+        .card, .timeline-item, .role-list li { break-inside: avoid; }
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+    <!-- Navigation: persönliche Bewerbung, kein Kundenangebot -->
+
+    <header class="site-header">
+      <div class="container language-row">
+        <button id="language-toggle" type="button" lang="en" aria-label="Switch the whole page to English">For English, click here <span aria-hidden="true">↗</span></button>
+        <span class="language-context">Bewerbungsportfolio · DE / EN</span>
+      </div>
+      <div class="container nav">
+        <a class="brand" href="#home">
+          <span class="mark" aria-hidden="true">AA</span>
+          <span>
+            Abdi Abdirashid
+            <small>Persönliches Bewerbungsportfolio</small>
+          </span>
+        </a>
+
+        <nav class="nav-links" aria-label="Hauptnavigation">
+          <a href="#profile">Profil</a>
+          <a href="#practice">Flugpraxis</a>
+          <a href="#direction">Berufsziel</a>
+          <a class="nav-cta" href="#contact">Kontakt</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- 01. Persönlicher Einstieg -->
+
+      <section class="hero" id="home">
+        <!-- Dateiname inklusive Gross-/Kleinschreibung prüfen. -->
+        <video
+          class="hero-video"
+          id="background-video"
+          muted
+          loop
+          playsinline
+          preload="none"
+          poster="application-assets/drone-flight.jpg"
+          aria-hidden="true"
+          tabindex="-1"
+        >
+          <source src="application-assets/hero-drone.mp4" type="video/mp4">
+        </video>
+
+        <div class="container hero-content">
+          <div class="hero-copy">
+          <p class="eyebrow">
+            EASA A1/A3 + A2 · Bonstetten / Zürich
+          </p>
+
+          <h1>
+            Abdi Abdirashid.<br>
+            <span>UAV-Einsätze & technische Mitarbeit.</span>
+          </h1>
+
+          <p class="hero-role">
+            Drohnenpilot · Einstieg in UAV-Einsätze & technische Unterstützung
+          </p>
+
+          <p class="hero-lead">
+            Ich verbinde praktische Erfahrung in Unterhalt und
+            Metallproduktion mit meiner Begeisterung für Drohnen.
+            Ich suche eine Einstiegsposition, in der ich bei
+            Flugeinsätzen, Tests oder Inspektionsaufgaben mitarbeiten
+            und mich unter fachlicher Anleitung weiterentwickeln kann.
+          </p>
+
+          <div class="actions">
+            <a class="btn btn-white" href="#contact">
+              Gespräch vereinbaren →
+            </a>
+            <a class="btn btn-outline" href="#practice">
+              Meine Flugpraxis ansehen
+            </a>
+          </div>
+
+          </div>
+          <figure class="hero-photo">
+            <img src="application-assets/drone-team-1.jpg" alt="Gemeinsame Drohnenflugpraxis im Freien" width="1800" height="1013" fetchpriority="high">
+            <figcaption><span class="photo-dot" aria-hidden="true"></span> DJI-Flugpraxis · Persönliche Aufnahmen</figcaption>
+          </figure>
+          <div class="trustbar">
+            <div class="trust">
+              <strong>EASA A1/A3 + A2</strong>
+              <span>Fernpilotenqualifikationen</span>
+            </div>
+
+            <div class="trust">
+              <strong>Praktischer Hintergrund</strong>
+              <span>Unterhalt & Metallproduktion</span>
+            </div>
+
+            <div class="trust">
+              <strong>DJI-Flugpraxis</strong>
+              <span>Private Flüge & Luftaufnahmen</span>
+            </div>
+
+            <div class="trust">
+              <strong>Deutsch / Englisch</strong>
+              <span>Fliessend in beiden Sprachen</span>
+            </div>
+          </div>
+
+          <button
+            class="motion-button"
+            id="video-toggle"
+            type="button"
+            aria-controls="background-video"
+            hidden
+          >
+            Hintergrundvideo abspielen
+          </button>
+        </div>
+      </section>
+
+      <!-- 02. Profil und beruflicher Hintergrund -->
+
+      <section class="section" id="profile">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Mein Profil</p>
+              <h2>Praktisch erfahren.<br>Technisch interessiert.</h2>
+            </div>
+
+            <p>
+              Mein beruflicher Hintergrund liegt in praktischer Arbeit,
+              sorgfältigen Abläufen und der Zusammenarbeit im Team.
+              Darauf möchte ich meinen Einstieg in die Drohnenbranche
+              aufbauen.
+            </p>
+          </div>
+
+          <div class="profile-grid">
+            <article class="card">
+              <h3>Mein bisheriger Weg</h3>
+
+              <div class="timeline">
+                <div class="timeline-item">
+                  <small>2021 · Gemeinde Cham</small>
+                  <h3>Lehrabschluss als Unterhaltspraktiker</h3>
+                  <p>
+                    Praktische Grundlage in Unterhaltsarbeiten,
+                    Hauswartaufgaben und dem verantwortungsvollen
+                    Umgang mit Arbeitsmitteln.
+                  </p>
+                </div>
+
+                <div class="timeline-item">
+                  <small>Weitere Berufserfahrung</small>
+                  <h3>Unterhalt, Gebäudebetrieb und baunahe Arbeiten</h3>
+                  <p>
+                    Erfahrung mit unterschiedlichen praktischen
+                    Aufgaben, der Abstimmung im Team und
+                    wechselnden Anforderungen im Arbeitsalltag.
+                  </p>
+                </div>
+
+                <div class="timeline-item">
+                  <small>Seit April 2025</small>
+                  <h3>Metallproduktion & Probenvorbereitung</h3>
+                  <p>
+                    Ich bereite Metallproben vor und schneide sie
+                    für Qualitätsprüfungen vor der Produktfreigabe.
+                    Dabei sind Genauigkeit, wiederholbare Abläufe
+                    und Sicherheitsbewusstsein besonders wichtig.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="card dark-card">
+              <p class="eyebrow">Meine Motivation</p>
+              <h3>Aus Flugbegeisterung wird ein berufliches Ziel.</h3>
+
+              <p>
+                In meiner Freizeit fliege ich DJI-Drohnen mit
+                Freunden und halte Landschaften aus der Luft fest.
+                Mich interessiert dabei nicht nur das Bild,
+                sondern auch die Technik dahinter.
+              </p>
+
+              <p>
+                Durch die Zusammenarbeit mit Technikern und
+                Polymechanikern habe ich Einblicke in
+                Produktionsprozesse, Qualitätsanforderungen
+                und technische Arbeitsabläufe gewonnen.
+              </p>
+
+              <p>
+                Diese Erfahrung möchte ich in ein Drohnenunternehmen
+                einbringen: praktisch mitarbeiten, neue Systeme
+                kennenlernen und schrittweise Verantwortung übernehmen.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 03. Was ich mitbringe -->
+
+      <section class="section section-white" id="skills">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Was ich mitbringe</p>
+              <h2>Eine praktische Grundlage für Ihr Team.</h2>
+            </div>
+
+            <p>
+              Meine bisherigen Erfahrungen liegen in industrieller
+              Arbeit und privater Drohnenpraxis. Für professionelle
+              UAV-Abläufe bringe ich Lernbereitschaft und Interesse
+              an einer strukturierten Einarbeitung mit.
+            </p>
+          </div>
+
+          <div class="skills-grid">
+            <article class="card">
+              <div class="skill-number" aria-hidden="true">01</div>
+              <h3>Drohnenqualifikationen</h3>
+              <p>
+                EASA A1/A3 und A2 sowie praktische Erfahrung
+                mit DJI-Drohnen. Meine Nachweise stelle ich
+                im Bewerbungsprozess gerne bereit.
+              </p>
+            </article>
+
+            <article class="card">
+              <div class="skill-number" aria-hidden="true">02</div>
+              <h3>Sorgfältiges Arbeiten</h3>
+              <p>
+                Das Vorbereiten und Schneiden von Metallproben
+                verlangt Genauigkeit, Konzentration und die
+                Einhaltung vorgegebener Abläufe.
+              </p>
+            </article>
+
+            <article class="card">
+              <div class="skill-number" aria-hidden="true">03</div>
+              <h3>Technische Neugier</h3>
+              <p>
+                Ich beschäftige mich mit Drohnen, Programmierung
+                und eigenen digitalen Projekten. Zusätzlich
+                nutze ich Onlinekurse auf Coursera zum Lernen.
+              </p>
+            </article>
+
+            <article class="card">
+              <div class="skill-number" aria-hidden="true">04</div>
+              <h3>Klare Kommunikation</h3>
+              <p>
+                Ich spreche fliessend Deutsch und Englisch,
+                arbeite gerne im Team und lege Wert auf
+                respektvolle, zuverlässige Zusammenarbeit.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 04. Echte Flugpraxis, klar als Übung bezeichnet -->
+
+      <section class="section" id="practice">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Mein Drohnenportfolio</p>
+              <h2>Einblicke in meine Flugpraxis.</h2>
+            </div>
+
+            <p>
+              Die Aufnahmen stammen aus privaten Flügen und
+              Übungseinheiten. Sie zeigen meinen aktuellen
+              Erfahrungsstand und mein Interesse an Luftaufnahmen.
+            </p>
+          </div>
+
+          <div class="work-grid">
+            <figure class="video-card">
+              <video
+                controls
+                playsinline
+                preload="metadata"
+                poster="application-assets/showreel-poster.jpg"
+                aria-label="Video mit Abdis privaten Drohnenaufnahmen"
+              >
+                <source src="application-assets/showreel.mp4" type="video/mp4">
+                Ihr Browser unterstützt dieses Video nicht.
+                <a href="application-assets/showreel.mp4">Videodatei öffnen</a>
+              </video>
+
+              <!-- Beschriftung unter dem Video hält die Bedienung frei. -->
+              <figcaption>
+                <span class="tag">Private Flugpraxis · Übungsaufnahmen</span>
+                <strong>Landschaften aus der Luft</strong>
+                <p>
+                  Eine Auswahl meiner Drohnenaufnahmen.
+                  Mein Übungsfokus liegt auf ruhigen Flugbewegungen,
+                  Bildgestaltung und der Weiterentwicklung meiner
+                  praktischen Fähigkeiten.
+                </p>
+              </figcaption>
+            </figure>
+
+            <aside class="card" aria-labelledby="practice-details">
+              <h3 id="practice-details">Einordnung der Aufnahmen</h3>
+
+              <dl class="detail-list">
+                <dt>Rahmen</dt>
+                <dd>
+                  Private Landschaftsflüge und gemeinsame
+                  Übungseinheiten mit Freunden.
+                </dd>
+
+                <dt>Meine Praxis</dt>
+                <dd>
+                  DJI-Drohnen fliegen, Luftaufnahmen erstellen
+                  und ausgewählte Clips einfach bearbeiten.
+                </dd>
+
+                <dt>Mein Lernfokus</dt>
+                <dd>
+                  Ruhige Steuerbewegungen, nachvollziehbare
+                  Aufnahmeabläufe und eine klare Präsentation
+                  der Ergebnisse.
+                </dd>
+
+                <dt>Nächster Entwicklungsschritt</dt>
+                <dd>
+                  Professionelle Einsatzvorbereitung,
+                  unternehmensspezifische Sicherheitsabläufe
+                  und strukturierte Dokumentation kennenlernen.
+                </dd>
+              </dl>
+            </aside>
+          </div>
+
+          <p class="learning-note">
+            <strong>Mein aktueller Stand:</strong>
+            Ich bewerbe mich für den Einstieg in professionelle
+            Drohneneinsätze. Die gezeigten Videos sind Übungsaufnahmen,
+            keine Referenzen abgeschlossener Kundeninspektionen.
+          </p>
+        </div>
+      </section>
+
+      <!-- 05. Gesuchte Aufgaben -->
+
+      <section class="section section-white" id="direction">
+        <div class="container">
+          <div class="direction">
+            <div>
+              <p class="eyebrow">Meine berufliche Richtung</p>
+              <h2>Mit anpacken.<br>Dazulernen.<br>Verantwortung aufbauen.</h2>
+
+              <p>
+                Ich suche eine Einstiegsposition in einem Drohnen-
+                oder Technologieunternehmen, in der praktische
+                Mitarbeit und technische Weiterentwicklung
+                zusammenkommen.
+              </p>
+
+              <p>
+                Besonders interessieren mich Flugbetrieb,
+                Testeinsätze und die Unterstützung von
+                Inspektionsteams. Ich bin offen für eine
+                Einarbeitung in Ihre Systeme und Arbeitsabläufe.
+              </p>
+
+              <a class="btn btn-white" href="#contact">
+                Über eine passende Rolle sprechen →
+              </a>
+            </div>
+
+            <ul class="role-list">
+              <li>
+                <strong>UAV-Einsätze & Unterstützung vor Ort</strong>
+                <span>
+                  Bei Vorbereitung, Ausrüstung und Durchführung
+                  von Einsätzen unter Anleitung mitarbeiten.
+                </span>
+              </li>
+
+              <li>
+                <strong>Testbetrieb & technische Mitarbeit</strong>
+                <span>
+                  Bei Aufbauten, Prüfschritten und der
+                  Dokumentation von Beobachtungen unterstützen.
+                </span>
+              </li>
+
+              <li>
+                <strong>Unterstützung bei Inspektionen</strong>
+                <span>
+                  Bildaufnahmen und Einsatzabläufe für
+                  qualifizierte Fachpersonen kennenlernen.
+                </span>
+              </li>
+
+              <li>
+                <strong>Technische Produktion im Drohnenumfeld</strong>
+                <span>
+                  Meine Produktionserfahrung einbringen und
+                  neue Montage- und Prüfabläufe erlernen.
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 06. Ergänzende Fähigkeiten -->
+
+      <section class="section" id="more">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Neben der Flugpraxis</p>
+              <h2>Interesse an Technik und digitalen Projekten.</h2>
+            </div>
+
+            <p>
+              Ich lerne gerne durch Ausprobieren. Eigene Projekte
+              helfen mir, technische Zusammenhänge besser zu
+              verstehen und Ergebnisse verständlich darzustellen.
+            </p>
+          </div>
+
+          <div class="extra-grid">
+            <article class="card">
+              <h3>Websites & Programmierung</h3>
+              <p>
+                Ich beschäftige mich selbstständig mit einfachen
+                Websites und Programmierung. Dabei lerne ich,
+                Inhalte zu strukturieren und digitale Projekte
+                schrittweise umzusetzen.
+              </p>
+            </article>
+
+            <article class="card">
+              <h3>Videobearbeitung</h3>
+              <p>
+                Ich übe einfache Schnitte, die Auswahl passender
+                Sequenzen und die Aufbereitung von Drohnenclips
+                für unterschiedliche digitale Formate.
+              </p>
+            </article>
+
+            <article class="card">
+              <h3>Persönlicher Ausgleich</h3>
+              <p>
+                Basketball, Fitness, Camping und Vanlife gehören
+                zu meinen Interessen. Ich bin gerne draussen
+                und unternehme etwas mit anderen.
+              </p>
+              <a
+                class="text-link"
+                href="https://abdisresume2.netlify.app/hobbies"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Mehr über meine Hobbys →
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 07. Kontakt für Arbeitgeber -->
+
+      <section class="section section-white" id="contact">
+        <div class="container contact-grid">
+          <div class="contact-main">
+            <p class="eyebrow">Kontakt & Bewerbung</p>
+            <h2>Lernen wir uns kennen.</h2>
+
+            <p>
+              Sie suchen einen praktisch veranlagten Mitarbeiter
+              mit Drohnenqualifikationen und Interesse an
+              technischer Weiterentwicklung?
+            </p>
+
+            <p>
+              Ich freue mich über ein Gespräch zu einer
+              Einstiegsposition, einer Einarbeitung oder
+              einer passenden Aufgabe in Ihrem Team.
+            </p>
+
+            <div class="actions">
+              <a
+                class="btn btn-dark"
+                href="mailto:abdi.abdirashid@hotmail.com?subject=Gespr%C3%A4ch%20zum%20UAV-Einstieg%20-%20Abdi%20Abdirashid"
+              >
+                E-Mail senden →
+              </a>
+
+              <a class="btn btn-light" href="tel:+41764597006">
+                Anrufen
+              </a>
+
+              <a
+                class="btn btn-light"
+                href="https://wa.me/41764597006?text=Hallo%20Abdi%2C%20ich%20habe%20Ihr%20Bewerbungsportfolio%20gesehen%20und%20m%C3%B6chte%20gerne%20mit%20Ihnen%20sprechen."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                WhatsApp
+              </a>
+            </div>
+
+            <p class="documents-note">
+              Meinen Lebenslauf sowie Ausbildungs- und
+              Drohnennachweise stelle ich Ihnen auf Anfrage
+              gerne zur Verfügung.
+            </p>
+
+            <!--
+              Optional: Sobald Ihre tatsächliche PDF-Datei vorliegt,
+              können Sie hier einen Download ergänzen:
+
+              <a
+                class="text-link"
+                href="../cv/Abdi_Abdirashid_Drone_CV_GER.pdf"
+                download
+              >
+                Lebenslauf herunterladen
+              </a>
+
+              Die PDF muss im selben Ordner wie diese HTML-Datei liegen.
+            -->
+          </div>
+
+          <aside class="contact-details" aria-labelledby="contact-name">
+            <h3 id="contact-name">Abdi Abdirashid</h3>
+
+            <dl>
+              <dt>Standort</dt>
+              <dd>Bonstetten / Zürich, Schweiz</dd>
+
+              <dt>Telefon</dt>
+              <dd>
+                <a href="tel:+41764597006">+41 76 459 70 06</a>
+              </dd>
+
+              <dt>E-Mail</dt>
+              <dd>
+                <a href="mailto:abdi.abdirashid@hotmail.com">
+                  abdi.abdirashid@hotmail.com
+                </a>
+              </dd>
+
+              <dt>Sprachen</dt>
+              <dd>Deutsch und Englisch, fliessend</dd>
+
+              <dt>Drohnenqualifikationen</dt>
+              <dd>EASA A1/A3 + A2</dd>
+
+              <dt>Eintrittstermin</dt>
+              <dd>Gerne im persönlichen Gespräch zu klären</dd>
+            </dl>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-row">
+        <span>© 2026 Abdi Abdirashid</span>
+        <span>Persönliches Bewerbungsportfolio · UAV & Technik</span>
+      </div>
+    </footer>
+
+    
+  <script>
+/* Complete German/English switching, including metadata and contact links. */
+(() => {
+  const english = {"Abdi Abdirashid | Drohnenpilot & UAV-Bewerbungsportfolio": "Abdi Abdirashid | Drone Pilot & UAV Application Portfolio", "Zum Inhalt springen": "Skip to content", "AA": "AA", "Abdi Abdirashid": "Abdi Abdirashid", "Persönliches Bewerbungsportfolio": "Personal application portfolio", "Profil": "Profile", "Flugpraxis": "Flight practice", "Berufsziel": "Career focus", "Kontakt": "Contact", "EASA A1/A3 + A2 · Bonstetten / Zürich": "EASA A1/A3 + A2 · Bonstetten / Zurich", "Abdi Abdirashid.": "Abdi Abdirashid.", "Drohnenpilot · Einstieg in UAV-Einsätze & technische Unterstützung": "Drone pilot · Entry-level UAV operations & technical support", "Ich verbinde praktische Erfahrung in Unterhalt und Metallproduktion mit meiner Begeisterung für Drohnen. Ich suche eine Einstiegsposition, in der ich bei Flugeinsätzen, Tests oder Inspektionsaufgaben mitarbeiten und mich unter fachlicher Anleitung weiterentwickeln kann.": "I combine practical experience in maintenance and metal production with my interest in drones. I am looking for an entry-level role supporting flight operations, testing or inspection work while developing my skills with professional guidance.", "Gespräch vereinbaren →": "Arrange a conversation →", "Meine Flugpraxis ansehen": "View my flight practice", "EASA A1/A3 + A2": "EASA A1/A3 + A2", "Fernpilotenqualifikationen": "Remote pilot qualifications", "Praktischer Hintergrund": "Practical background", "Unterhalt & Metallproduktion": "Maintenance & metal production", "DJI-Flugpraxis": "DJI flight practice", "Private Flüge & Luftaufnahmen": "Personal flights & aerial footage", "Deutsch / Englisch": "German / English", "Fliessend in beiden Sprachen": "Fluent in both languages", "Hintergrundvideo abspielen": "Play background video", "Mein Profil": "My profile", "Praktisch erfahren.": "Practical experience.", "Technisch interessiert.": "Technical curiosity.", "Mein beruflicher Hintergrund liegt in praktischer Arbeit, sorgfältigen Abläufen und der Zusammenarbeit im Team. Darauf möchte ich meinen Einstieg in die Drohnenbranche aufbauen.": "My professional background is built on practical work, careful processes and teamwork. I want to use this foundation to start my career in the drone industry.", "Mein bisheriger Weg": "My experience so far", "2021 · Gemeinde Cham": "2021 · Municipality of Cham", "Lehrabschluss als Unterhaltspraktiker": "Completed apprenticeship in maintenance", "Praktische Grundlage in Unterhaltsarbeiten, Hauswartaufgaben und dem verantwortungsvollen Umgang mit Arbeitsmitteln.": "A practical foundation in maintenance, caretaking and the responsible use of tools and equipment.", "Weitere Berufserfahrung": "Further work experience", "Unterhalt, Gebäudebetrieb und baunahe Arbeiten": "Maintenance, building operations & construction-related work", "Erfahrung mit unterschiedlichen praktischen Aufgaben, der Abstimmung im Team und wechselnden Anforderungen im Arbeitsalltag.": "Experience with varied practical tasks, team coordination and changing requirements in everyday work.", "Seit April 2025": "Since April 2025", "Metallproduktion & Probenvorbereitung": "Metal production & sample preparation", "Ich bereite Metallproben vor und schneide sie für Qualitätsprüfungen vor der Produktfreigabe. Dabei sind Genauigkeit, wiederholbare Abläufe und Sicherheitsbewusstsein besonders wichtig.": "I prepare and cut metal samples for quality testing before product release. Accuracy, repeatable processes and safety awareness are particularly important in this work.", "Meine Motivation": "My motivation", "Aus Flugbegeisterung wird ein berufliches Ziel.": "Turning an interest in flying into a career.", "In meiner Freizeit fliege ich DJI-Drohnen mit Freunden und halte Landschaften aus der Luft fest. Mich interessiert dabei nicht nur das Bild, sondern auch die Technik dahinter.": "In my free time, I fly DJI drones with friends and capture landscapes from the air. I am interested in both the images and the technology behind them.", "Durch die Zusammenarbeit mit Technikern und Polymechanikern habe ich Einblicke in Produktionsprozesse, Qualitätsanforderungen und technische Arbeitsabläufe gewonnen.": "Working with technicians and polymechanics has given me insight into production processes, quality requirements and technical workflows.", "Diese Erfahrung möchte ich in ein Drohnenunternehmen einbringen: praktisch mitarbeiten, neue Systeme kennenlernen und schrittweise Verantwortung übernehmen.": "I want to bring this experience to a drone company: contribute practically, learn new systems and gradually take on responsibility.", "Was ich mitbringe": "What I bring", "Eine praktische Grundlage für Ihr Team.": "A practical foundation for your team.", "Meine bisherigen Erfahrungen liegen in industrieller Arbeit und privater Drohnenpraxis. Für professionelle UAV-Abläufe bringe ich Lernbereitschaft und Interesse an einer strukturierten Einarbeitung mit.": "My experience so far is in industrial work and personal drone practice. I bring a willingness to learn and an interest in structured training for professional UAV operations.", "01": "01", "Drohnenqualifikationen": "Drone qualifications", "EASA A1/A3 und A2 sowie praktische Erfahrung mit DJI-Drohnen. Meine Nachweise stelle ich im Bewerbungsprozess gerne bereit.": "EASA A1/A3 and A2, alongside practical experience with DJI drones. I am happy to provide my certificates during the application process.", "02": "02", "Sorgfältiges Arbeiten": "Careful working habits", "Das Vorbereiten und Schneiden von Metallproben verlangt Genauigkeit, Konzentration und die Einhaltung vorgegebener Abläufe.": "Preparing and cutting metal samples requires accuracy, concentration and following established procedures.", "03": "03", "Technische Neugier": "Technical curiosity", "Ich beschäftige mich mit Drohnen, Programmierung und eigenen digitalen Projekten. Zusätzlich nutze ich Onlinekurse auf Coursera zum Lernen.": "I explore drones, programming and my own digital projects. I also use online courses on Coursera to keep learning.", "04": "04", "Klare Kommunikation": "Clear communication", "Ich spreche fliessend Deutsch und Englisch, arbeite gerne im Team und lege Wert auf respektvolle, zuverlässige Zusammenarbeit.": "I speak fluent German and English, enjoy teamwork and value respectful, reliable collaboration.", "Mein Drohnenportfolio": "My drone portfolio", "Einblicke in meine Flugpraxis.": "A look at my flight practice.", "Die Aufnahmen stammen aus privaten Flügen und Übungseinheiten. Sie zeigen meinen aktuellen Erfahrungsstand und mein Interesse an Luftaufnahmen.": "These recordings come from personal flights and practice sessions. They show my current experience and interest in aerial imaging.", "Ihr Browser unterstützt dieses Video nicht.": "Your browser does not support this video.", "Videodatei öffnen": "Open video file", "Private Flugpraxis · Übungsaufnahmen": "Personal flight practice · Practice footage", "Landschaften aus der Luft": "Landscapes from above", "Eine Auswahl meiner Drohnenaufnahmen. Mein Übungsfokus liegt auf ruhigen Flugbewegungen, Bildgestaltung und der Weiterentwicklung meiner praktischen Fähigkeiten.": "A selection of my drone footage. My practice focuses on smooth flight movements, composition and developing my practical skills.", "Einordnung der Aufnahmen": "About the footage", "Rahmen": "Context", "Private Landschaftsflüge und gemeinsame Übungseinheiten mit Freunden.": "Personal landscape flights and shared practice sessions with friends.", "Meine Praxis": "My practical experience", "DJI-Drohnen fliegen, Luftaufnahmen erstellen und ausgewählte Clips einfach bearbeiten.": "Flying DJI drones, capturing aerial footage and making simple edits to selected clips.", "Mein Lernfokus": "My learning focus", "Ruhige Steuerbewegungen, nachvollziehbare Aufnahmeabläufe und eine klare Präsentation der Ergebnisse.": "Smooth control inputs, consistent recording routines and clear presentation of the results.", "Nächster Entwicklungsschritt": "Next development step", "Professionelle Einsatzvorbereitung, unternehmensspezifische Sicherheitsabläufe und strukturierte Dokumentation kennenlernen.": "Learning professional mission preparation, company-specific safety procedures and structured documentation.", "Mein aktueller Stand:": "My current experience:", "Ich bewerbe mich für den Einstieg in professionelle Drohneneinsätze. Die gezeigten Videos sind Übungsaufnahmen, keine Referenzen abgeschlossener Kundeninspektionen.": "I am applying for entry-level professional drone roles. The videos shown are practice footage, not references from completed commercial inspections.", "Meine berufliche Richtung": "My career focus", "Mit anpacken.": "Contribute.", "Dazulernen.": "Keep learning.", "Verantwortung aufbauen.": "Build responsibility.", "Ich suche eine Einstiegsposition in einem Drohnen- oder Technologieunternehmen, in der praktische Mitarbeit und technische Weiterentwicklung zusammenkommen.": "I am looking for an entry-level role with a drone or technology company that combines practical work with technical development.", "Besonders interessieren mich Flugbetrieb, Testeinsätze und die Unterstützung von Inspektionsteams. Ich bin offen für eine Einarbeitung in Ihre Systeme und Arbeitsabläufe.": "I am particularly interested in flight operations, testing and supporting inspection teams. I am open to training in your systems and workflows.", "Über eine passende Rolle sprechen →": "Discuss a suitable role →", "UAV-Einsätze & Unterstützung vor Ort": "UAV operations & field support", "Bei Vorbereitung, Ausrüstung und Durchführung von Einsätzen unter Anleitung mitarbeiten.": "Help with preparation, equipment and carrying out missions under supervision.", "Testbetrieb & technische Mitarbeit": "Testing & technical support", "Bei Aufbauten, Prüfschritten und der Dokumentation von Beobachtungen unterstützen.": "Assist with setups, test steps and recording observations.", "Unterstützung bei Inspektionen": "Inspection support", "Bildaufnahmen und Einsatzabläufe für qualifizierte Fachpersonen kennenlernen.": "Learn imaging and operational procedures that support qualified specialists.", "Technische Produktion im Drohnenumfeld": "Technical production in the drone industry", "Meine Produktionserfahrung einbringen und neue Montage- und Prüfabläufe erlernen.": "Contribute my production experience and learn new assembly and testing procedures.", "Neben der Flugpraxis": "Beyond flight practice", "Interesse an Technik und digitalen Projekten.": "An interest in technology and digital projects.", "Ich lerne gerne durch Ausprobieren. Eigene Projekte helfen mir, technische Zusammenhänge besser zu verstehen und Ergebnisse verständlich darzustellen.": "I enjoy learning through hands-on experimentation. My own projects help me understand technical concepts and present results clearly.", "Websites & Programmierung": "Websites & programming", "Ich beschäftige mich selbstständig mit einfachen Websites und Programmierung. Dabei lerne ich, Inhalte zu strukturieren und digitale Projekte schrittweise umzusetzen.": "I learn independently through simple websites and programming projects, developing my ability to organise content and build digital projects step by step.", "Videobearbeitung": "Video editing", "Ich übe einfache Schnitte, die Auswahl passender Sequenzen und die Aufbereitung von Drohnenclips für unterschiedliche digitale Formate.": "I practise simple cuts, selecting suitable sequences and preparing drone clips for different digital formats.", "Persönlicher Ausgleich": "Outside work", "Basketball, Fitness, Camping und Vanlife gehören zu meinen Interessen. Ich bin gerne draussen und unternehme etwas mit anderen.": "Basketball, fitness, camping and van life are among my interests. I enjoy being outdoors and spending time with others.", "Mehr über meine Hobbys →": "More about my hobbies →", "Kontakt & Bewerbung": "Contact & application", "Lernen wir uns kennen.": "Let's talk.", "Sie suchen einen praktisch veranlagten Mitarbeiter mit Drohnenqualifikationen und Interesse an technischer Weiterentwicklung?": "Are you looking for a practical team member with drone qualifications and an interest in technical development?", "Ich freue mich über ein Gespräch zu einer Einstiegsposition, einer Einarbeitung oder einer passenden Aufgabe in Ihrem Team.": "I would welcome a conversation about an entry-level position, training or a suitable role in your team.", "E-Mail senden →": "Send an email →", "Anrufen": "Call me", "WhatsApp": "WhatsApp", "Meinen Lebenslauf sowie Ausbildungs- und Drohnennachweise stelle ich Ihnen auf Anfrage gerne zur Verfügung.": "I am happy to provide my CV, apprenticeship documents and drone certificates on request.", "Standort": "Location", "Bonstetten / Zürich, Schweiz": "Bonstetten / Zurich, Switzerland", "Telefon": "Phone", "+41 76 459 70 06": "+41 76 459 70 06", "E-Mail": "Email", "abdi.abdirashid@hotmail.com": "abdi.abdirashid@hotmail.com", "Sprachen": "Languages", "Deutsch und Englisch, fliessend": "Fluent German and English", "Eintrittstermin": "Start date", "Gerne im persönlichen Gespräch zu klären": "To be discussed in a personal conversation", "© 2026 Abdi Abdirashid": "© 2026 Abdi Abdirashid", "Persönliches Bewerbungsportfolio · UAV & Technik": "Personal application portfolio · UAV & Technology", "UAV-Einsätze & technische Mitarbeit.": "UAV operations & technical support.", "Bewerbungsportfolio · DE / EN": "Application portfolio · DE / EN", "DJI-Flugpraxis · Persönliche Aufnahmen": "DJI flight practice · Personal footage"};
+  const normalize = value => value.trim().replace(/\s+/g, ' ');
+  const toggle = document.getElementById('language-toggle');
+  const video = document.getElementById('background-video');
+  const motion = document.getElementById('video-toggle');
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const description = document.querySelector('meta[name="description"]');
+  const germanDescription = description.content;
+  const englishDescription = 'Application portfolio of Abdi Abdirashid in Bonstetten near Zurich. EASA A1/A3 + A2, practical maintenance and metal production experience, and an interest in UAV operations, inspection support and technical work.';
+  const walker = document.createTreeWalker(document.documentElement, NodeFilter.SHOW_TEXT, {
+    acceptNode(node) {
+      if (!node.nodeValue.trim() || node.parentElement.closest('script, style, #language-toggle, #video-toggle')) {
+        return NodeFilter.FILTER_REJECT;
+      }
+      return NodeFilter.FILTER_ACCEPT;
+    }
+  });
+  const records = [];
+  while (walker.nextNode()) {
+    const node = walker.currentNode;
+    const key = normalize(node.nodeValue);
+    if (Object.prototype.hasOwnProperty.call(english, key)) {
+      const prefix = node.nodeValue.match(/^\s*/)[0];
+      const suffix = node.nodeValue.match(/\s*$/)[0];
+      records.push({ node, de: node.nodeValue, en: prefix + english[key] + suffix });
+    }
+  }
+  const attributeTranslations = {
+    'Hauptnavigation': 'Main navigation',
+    'Gemeinsame Drohnenflugpraxis im Freien': 'Shared outdoor drone flight practice',
+    'Video mit Abdis privaten Drohnenaufnahmen': "Video of Abdi's personal drone footage"
+  };
+  const attributes = [];
+  document.querySelectorAll('[alt], [aria-label]').forEach(element => {
+    ['alt', 'aria-label'].forEach(name => {
+      const de = element.getAttribute(name);
+      if (attributeTranslations[de]) attributes.push({element, name, de, en: attributeTranslations[de]});
+    });
+  });
+  const links = [...document.querySelectorAll('a[href]')]
+    .filter(a => /[?](subject|text)=/.test(a.getAttribute('href')))
+    .map(a => ({element: a, de: a.getAttribute('href')}));
+  let language = 'de';
+  try {
+    const saved = localStorage.getItem('abdi-application-language');
+    if (saved === 'en' || saved === 'de') language = saved;
+  } catch { /* The switch also works when storage is unavailable. */ }
+  function updateMotion() {
+    motion.textContent = language === 'en'
+      ? (video.paused ? 'Play background video' : 'Pause background video')
+      : (video.paused ? 'Hintergrundvideo abspielen' : 'Hintergrundvideo pausieren');
+  }
+  function applyLanguage(next) {
+    language = next;
+    records.forEach(record => { record.node.nodeValue = record[language]; });
+    attributes.forEach(record => record.element.setAttribute(record.name, record[language]));
+    document.documentElement.lang = language === 'en' ? 'en' : 'de-CH';
+    description.content = language === 'en' ? englishDescription : germanDescription;
+    toggle.textContent = language === 'en' ? 'Für Deutsch hier klicken ↗' : 'For English, click here ↗';
+    toggle.lang = language === 'en' ? 'de' : 'en';
+    toggle.setAttribute('aria-label', language === 'en' ? 'Gesamte Seite auf Deutsch anzeigen' : 'Switch the whole page to English');
+    links.forEach(({element, de}) => {
+      if (language === 'de') { element.setAttribute('href', de); return; }
+      const url = new URL(de);
+      if (url.protocol === 'mailto:') {
+        url.searchParams.set('subject', 'UAV career conversation - Abdi Abdirashid');
+      } else {
+        url.searchParams.set('text', 'Hello Abdi, I saw your application portfolio and would like to speak with you.');
+      }
+      element.setAttribute('href', url.href);
+    });
+    updateMotion();
+    try { localStorage.setItem('abdi-application-language', language); } catch {}
+  }
+  toggle.addEventListener('click', () => applyLanguage(language === 'de' ? 'en' : 'de'));
+  applyLanguage(language);
+  motion.hidden = false;
+  async function play() {
+    try { await video.play(); } catch { /* Keep the poster and manual play control. */ }
+    updateMotion();
+  }
+  motion.addEventListener('click', () => video.paused ? play() : video.pause());
+  video.addEventListener('play', updateMotion);
+  video.addEventListener('pause', updateMotion);
+  video.addEventListener('error', () => { motion.hidden = true; });
+  reducedMotion.addEventListener('change', event => { if (event.matches) video.pause(); });
+  if (!reducedMotion.matches) play();
+})();
+
+</script>
+  </body>
+</html>
